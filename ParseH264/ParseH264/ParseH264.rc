@@ -1,0 +1,408 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\SpecialVH264.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "..\\res\\264.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 207, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 H.264分析器"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "H.264分析器，1.1 版",IDC_STATIC,39,13,114,8,SS_NOPREFIX
+    LTEXT           "作者：雷霄骅",IDC_STATIC,38,25,114,11
+    DEFPUSHBUTTON   "确定",IDOK,71,153,50,14,WS_GROUP
+    LTEXT           "版权所有 (C) 2014",IDC_STATIC,70,138,70,8
+    LTEXT           "Email：",IDC_STATIC,38,50,23,11
+    LTEXT           "中国传媒大学/数字电视技术",IDC_STATIC,38,38,114,13
+    LTEXT           "网站：",IDC_STATIC,38,62,22,13
+    CONTROL         "http://blog.csdn.net/leixiaohua1020",IDC_MFCLINK_SITE,
+                    "MfcLink",WS_TABSTOP,63,63,128,13
+    CONTROL         "leixiaohua1020@126.com",IDC_MFCLINK_EMAIL,"MfcLink",WS_TABSTOP,62,50,113,13
+    LTEXT           "本程序用到了开源工程h264bitstream",IDC_STATIC,37,76,143,14
+    LTEXT           "使用方法：\r\n1.选择“文件路径”，打开一个H.264文件。\r\n2.单击“NAL列表”中的任意NAL，查看详细信息。",IDC_STATIC,37,98,150,33
+END
+
+IDD_SPECIAL_V_H264 DIALOGEX 0, 0, 552, 368
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "H.264 分析器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,494,346,50,14
+    DEFPUSHBUTTON   "开始",IDC_V_H264_INPUTURL_OPEN,383,346,50,14
+    CONTROL         "",IDC_V_H264_INPUTURL,"MfcEditBrowse",WS_BORDER | WS_TABSTOP | 0x80,55,88,489,14
+    CONTROL         "",IDC_V_H264_NALLIST,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,19,134,243,197
+    GROUPBOX        "NAL列表",IDC_STATIC,7,110,265,232
+    CONTROL         "最多输出5000条",IDC_V_H264_NALLIST_MAXNUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,120,79,10
+    PUSHBUTTON      "关于",IDC_V_H264_ABOUT,439,346,50,14
+    EDITTEXT        IDC_V_H264_NALINFO,290,135,241,197,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "单击NAL显示详细信息",IDC_STATIC,278,111,267,232
+    CONTROL         1000,IDC_V_H264_LOGO,"Static",SS_BITMAP,9,7,533,69
+    LTEXT           "文件路径：",IDC_STATIC,7,90,41,8
+    LTEXT           "语言：",IDC_STATIC,7,348,25,8
+    COMBOBOX        IDC_V_H264_LANG,38,346,55,50,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,0
+ PRODUCTVERSION 1,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "中国传媒大学"
+            VALUE "FileDescription", "SpecialVH264"
+            VALUE "FileVersion", "1.0.1.0"
+            VALUE "InternalName", "SpecialVH264.exe"
+            VALUE "LegalCopyright", "雷霄骅。保留所有权利。"
+            VALUE "OriginalFilename", "SpecialVH264.exe"
+            VALUE "ProductName", "H.264专用分析工具"
+            VALUE "ProductVersion", "1.0.1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_SPECIAL_V_H264, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 545
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SPECIAL_V_H264 DLGINIT
+BEGIN
+    IDC_V_H264_INPUTURL, 0x37c, 42, 0
+0x4d3c, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 0x4d5f, 0x646f, 
+0x3e65, 0x3c31, 0x4d2f, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 
+0x4d5f, 0x646f, 0x3e65, 
+    0
+END
+
+IDD_ABOUTBOX DLGINIT
+BEGIN
+    IDC_MFCLINK_SITE, 0x37c, 157, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x4d2f, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 
+0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x4d3c, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 
+0x546c, 0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, "\076" 
+    IDC_MFCLINK_EMAIL, 0x37c, 186, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x6d3e, 0x6961, 0x746c, 
+0x3a6f, 0x656c, 0x7869, 0x6169, 0x686f, 0x6175, 0x3031, 0x3032, 0x3140, 
+0x3632, 0x632e, 0x6d6f, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 
+0x3e6c, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 
+0x7869, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 
+0x6665, 0x7869, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 
+0x6974, 0x3e70, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 
+0x6974, 0x3e70, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 
+0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, 0x463e, 0x4c41, 0x4553, 0x2f3c, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 
+0x6c6f, 0x6974, 0x3e70, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "..\\res\\main_theme_h264.bmp"
+IDB_LOGO_EN             BITMAP                  "..\\res\\main_theme_h264_en.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 SpecialVH264(&A)..."
+    IDS_INPUTURL_ERROR      "请输入路径！"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPECIAL_V_H264 DIALOGEX 0, 0, 553, 368
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "H.264 Analysis"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,489,346,50,14
+    DEFPUSHBUTTON   "Start",IDC_V_H264_INPUTURL_OPEN,378,346,50,14
+    CONTROL         "",IDC_V_H264_INPUTURL,"MfcEditBrowse",WS_BORDER | WS_TABSTOP | 0x80,55,88,490,14
+    CONTROL         "",IDC_V_H264_NALLIST,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,19,134,247,197
+    GROUPBOX        "NAL List：",IDC_STATIC,7,110,270,232
+    CONTROL         "Limit 5000 items",IDC_V_H264_NALLIST_MAXNUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,120,79,10
+    PUSHBUTTON      "About",IDC_V_H264_ABOUT,434,346,50,14
+    EDITTEXT        IDC_V_H264_NALINFO,289,135,247,197,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "NAL Detail",IDC_STATIC,280,111,266,232
+    CONTROL         133,IDC_V_H264_LOGO,"Static",SS_BITMAP,7,7,533,69
+    LTEXT           "File Path：",IDC_STATIC,10,90,36,8
+    LTEXT           "Language:",IDC_STATIC,7,348,35,8
+    COMBOBOX        IDC_V_H264_LANG,46,347,55,50,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 207, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About H.264 Analysis"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "H.264 Analysis，version 1.1",IDC_STATIC,39,13,114,8,SS_NOPREFIX
+    LTEXT           "Author : Lei Xiaohua",IDC_STATIC,38,25,114,11
+    DEFPUSHBUTTON   "Close",IDOK,71,175,50,14,WS_GROUP
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,70,159,70,8
+    LTEXT           "Email：",IDC_STATIC,38,63,23,11
+    LTEXT           "Communication University of China / Digital TV Technology",IDC_STATIC,38,38,114,20
+    LTEXT           "Site：",IDC_STATIC,38,76,22,13
+    CONTROL         "http://blog.csdn.net/leixiaohua1020",IDC_MFCLINK_SITE,
+                    "MfcLink",WS_TABSTOP,63,76,128,13
+    CONTROL         "leixiaohua1020@126.com",IDC_MFCLINK_EMAIL,"MfcLink",WS_TABSTOP,62,63,113,13
+    LTEXT           "This software uses opensource project named h264bitstream",IDC_STATIC,37,88,143,20
+    LTEXT           "Method of use : \r\n1.Choose ""File Path"",open a h.264 bitstream file\r\n2.Click NAL shown in ""NAL List"" to learn the detail of the NAL.",IDC_STATIC,38,110,150,33
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SPECIAL_V_H264, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 546
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SPECIAL_V_H264 DLGINIT
+BEGIN
+    IDC_V_H264_INPUTURL, 0x37c, 42, 0
+0x4d3c, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 0x4d5f, 0x646f, 
+0x3e65, 0x3c31, 0x4d2f, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 
+0x4d5f, 0x646f, 0x3e65, 
+    0
+END
+
+IDD_ABOUTBOX DLGINIT
+BEGIN
+    IDC_MFCLINK_SITE, 0x37c, 157, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x4d2f, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 
+0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x4d3c, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 
+0x546c, 0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, "\076" 
+    IDC_MFCLINK_EMAIL, 0x37c, 186, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x6d3e, 0x6961, 0x746c, 
+0x3a6f, 0x656c, 0x7869, 0x6169, 0x686f, 0x6175, 0x3031, 0x3032, 0x3140, 
+0x3632, 0x632e, 0x6d6f, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 
+0x3e6c, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 
+0x7869, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 
+0x6665, 0x7869, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 
+0x6974, 0x3e70, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 
+0x6974, 0x3e70, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 
+0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, 0x463e, 0x4c41, 0x4553, 0x2f3c, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 
+0x6c6f, 0x6974, 0x3e70, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 SpecialVH264(&A)..."
+    IDS_INPUTURL_ERROR      "Please select a input file!"
+END
+
+#endif    // 英语 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "..\res\SpecialVH264.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{64fc1b54-58b5-40eb-a54e-ff896b8ead78}</ProjectGuid>
     <RootNamespace>ParseH264</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -152,6 +152,10 @@
     <ClInclude Include="h264_stream.h" />
     <ClInclude Include="NALParse.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="resource2.h" />
+    <ClInclude Include="resource3.h" />
+    <ClInclude Include="resource4.h" />
     <ClInclude Include="SpecialVH264.h" />
     <ClInclude Include="SpecialVH264Dlg.h" />
     <ClInclude Include="stdafx.h" />
@@ -168,14 +172,7 @@
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\res\264.ico" />
-    <Image Include="..\res\264_ico.png" />
-    <Image Include="..\res\main_theme_h264.bmp" />
-    <Image Include="..\res\main_theme_h264_en.bmp" />
-    <Image Include="..\res\SpecialVH264.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\res\SpecialVH264.rc2" />
+    <ResourceCompile Include="ParseH264.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
